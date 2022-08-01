@@ -1,7 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 
-const GameScreen = () => {
+const GameScreen = ({navigation}) => {
+
+
+
   return (
     <View>
       <Text>GameScreen</Text>
