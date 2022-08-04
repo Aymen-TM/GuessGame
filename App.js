@@ -5,6 +5,7 @@ import GameStartScreen from './screens/GameStartScreen';
 import GameScreen from './screens/GameScreen';
 import GameOverScreen from './screens/GameOverScreen';
 import { createStackNavigator } from '@react-navigation/stack';
+import Layout from './screens/Layout';
 
 
 

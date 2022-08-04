@@ -1,24 +1,36 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React, { useLayoutEffect } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
+import Layout from './Layout'
+import Title from '../components/Title'
+import NumberContainer from '../components/NumberContainer'
 
-const GameScreen = ({navigation}) => {
+const GameScreen = ({navigation,route}) => {
+
+  const initialGuess = generateRandomNumberBetween(1,100,route.params.number)
+  const [currentGuess, setcurrentGuess] = useState(initialGuess)
 
 
+
+
+
+
+  function generateRandomNumberBetween(min, max,exclude){
+    const rndNum = Math.floor(Math.random() * (max - min) + min);
+    if(rndNum === exclude){
+      return generateRandomNumberBetween(min, max, exclude);
+    }else{
+      return rndNum;
+    }
+  }
+
+  
 
   return (
-    <View>
-      <Text>GameScreen</Text>
-    </View>
+    <Layout>
+      <Title>Opponent's Guess</Title>
+      <NumberContainer >{currentGuess}</NumberContainer>
+    </Layout>
   )
 }
 
 export default GameScreen
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
