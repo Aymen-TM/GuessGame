@@ -3,15 +3,9 @@ import React from 'react'
 
 const Title = ({children}) => {
   return (
-    <Text className="font-bold text-{#ddb52f} text-2xl px-6 py-3 border-2 text-center" style={styles.border}>{children}</Text>
+    <Text className="font-bold text-white border-white text-2xl px-6 py-3 border-4 text-center">{children}</Text>
   )
 }
 
 export default Title
 
-
-const styles = StyleSheet.create({
-  border:{
-      borderColor: '#ddb52f',
-  }
-})

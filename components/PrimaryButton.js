@@ -3,7 +3,7 @@ import React from 'react'
 
 const PrimaryButton = ({children,onPress}) => {
   return (
-    <View className="bg-[#a054797a]  rounded-[28px] m-[4px] overflow-hidden">
+    <View className="bg-[#cc317ca1]  rounded-[28px] m-[4px] overflow-hidden">
         <Pressable android_ripple={{color:"#a05479c7"}} className="py-[8px] px-[16px]" onPress={()=>onPress()}>
             <Text className="text-white text-center">{children}</Text>
         </Pressable>

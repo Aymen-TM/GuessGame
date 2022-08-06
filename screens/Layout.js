@@ -8,7 +8,7 @@ const Layout = ({children}) => {
     <TouchableWithoutFeedback onPress={()=>Keyboard.dismiss()}>
       <LinearGradient colors={['#3b021f','#ddb52f']} className="flex-1">
         <ImageBackground imageStyle={styles.opacity} className="flex-1"  source={require('../assets/images/background.jpg')} resizeMode="cover">
-          <SafeAreaView className={"flex-1 p-12"}>
+          <SafeAreaView className={"flex-1 p-16"}>
             {children}
           </SafeAreaView>
         </ImageBackground>
